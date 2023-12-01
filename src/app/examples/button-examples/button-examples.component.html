@@ -33,14 +33,6 @@
   </div>
   <div class="example-block">
     <app-button
-      label="Disabled"
-      variant="secondary"
-      [disabled]="true"
-      (onClick)="onButtonClick($event)"
-    ></app-button>
-  </div>
-  <div class="example-block">
-    <app-button
       label="with icon"
       variant="primary"
       icon="po-icon po-icon-a11y-elderly"
@@ -54,6 +46,46 @@
     <app-button
       variant="primary"
       [icon]="iconTemplate"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled primary"
+      variant="primary"
+      [disabled]="true"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled secondary"
+      variant="secondary"
+      [disabled]="true"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled tertiary"
+      variant="tertiary"
+      [disabled]="true"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled danger"
+      variant="danger"
+      [disabled]="true"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled danger secondary"
+      variant="danger-secondary"
+      [disabled]="true"
       (onClick)="onButtonClick($event)"
     ></app-button>
   </div>

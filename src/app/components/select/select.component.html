@@ -21,15 +21,13 @@
       (change)="handleChange($any($event.target!).value)"
       (blur)="handleBlur()"
     >
-      <ng-container *ngIf="placeholder && !valueToShow">
-        <option
-          hidden
-          selected
-          disabled
-        >
-          {{ placeholder }}
-        </option>
-      </ng-container>
+      <option
+        hidden
+        selected
+        disabled
+      >
+        {{ placeholder }}
+      </option>
 
       <ng-container *ngFor="let option of options">
         <option [value]="option.value">

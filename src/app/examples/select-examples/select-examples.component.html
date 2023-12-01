@@ -12,15 +12,16 @@
     <app-select
       [disabled]="true"
       labelField="Disabled"
-      placeholder="Choose option"
+      placeholder="I am disabled"
       [options]="options"
+      helpText="This is a disabled select"
     ></app-select>
   </div>
   <div class="example-block">
     <app-select
       labelField="Custom size"
       width="150px"
-      placeholder="Choose option"
+      placeholder="A custom size"
       helpText="A simple helper text to show the component adapts to the width"
       [options]="options"
     ></app-select>
@@ -30,8 +31,8 @@
       labelField="Required"
       width="175px"
       requiredText="obrigatório"
-      placeholder="Choose option"
-      helpText="Help text"
+      placeholder="I'm required"
+      helpText="This select is required"
       [options]="options"
     ></app-select>
   </div>
@@ -40,16 +41,16 @@
       labelField="Custom error message"
       width="300px"
       requiredText="obrigatório"
-      placeholder="Choose option"
+      placeholder="A showcase for custom error"
       textError="Another long unnecessary message to showcase the component behavior with long text, in this case, with an error"
-      helpText="Help text"
+      helpText="This is required"
       [options]="options"
     ></app-select>
   </div>
   <div class="example-block">
     <app-select
       labelField="No helper text"
-      placeholder="Choose option"
+      placeholder="I have no helper text"
       [options]="options"
     ></app-select>
   </div>
@@ -63,9 +64,15 @@
     ></app-select>
   </div>
   <div class="example-block">
+    <app-select
+      labelField="No placeholder"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
     <form [formGroup]="formGroup">
       <app-select
-        labelField="With formGroup"
+        labelField="With formControl"
         placeholder="Choose option"
         formControlName="selectedOption"
         [options]="options"
@@ -76,7 +83,17 @@
   <div class="example-block">
     <form [formGroup]="formGroup">
       <app-select
-        labelField="With formGroup validators"
+        labelField="With formControl disabled"
+        placeholder="Choose option"
+        formControlName="selectedOptionDisabled"
+        [options]="options"
+      ></app-select>
+    </form>
+  </div>
+  <div class="example-block">
+    <form [formGroup]="formGroup">
+      <app-select
+        labelField="With formControl validators"
         placeholder="Choose option"
         formControlName="selectedOptionRequired"
         [options]="options"

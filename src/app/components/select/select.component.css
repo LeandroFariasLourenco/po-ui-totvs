@@ -20,11 +20,17 @@
 
 .select.error select {
   border-color: var(--color-error);
+  background-image: var(--select-arrow-icon-error);
 }
 
 .select:not(.error) .select-container {
   border-color: var(--color-dark);
   background-color: var(--color-accent);
+}
+
+.select-container select:focus-visible, .select-container select:focus {
+  border-color: var(--color-primary);
+  background-image: var(--select-arrow-icon-focus);
 }
 
 .select-container select {
@@ -34,8 +40,8 @@
   border-radius: var(--border-radius);
   color: var(--text-color-accent);
   cursor: text;
-  background-size: 12px;
-  background-position: calc(100% - 10px) center;
+  background-size: 22px;
+  background-position: calc(100% - 5px) center;
   background-repeat: no-repeat;
   appearance: none;
   background-image: var(--select-arrow-icon-default);
@@ -46,7 +52,6 @@
   background-color: var(--color-disabled);
   color: var(--text-color-disabled);
   border-color: var(--color-accent);
-  background-image: var(--select-arrow-icon-error);
 }
 
 .select.disabled .select-label-text {

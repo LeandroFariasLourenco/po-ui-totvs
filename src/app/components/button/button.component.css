@@ -44,3 +44,23 @@
 .large {
   min-height: 3.5em;
 }
+
+.button[disabled] {
+  cursor: not-allowed;
+}
+
+.primary[disabled], .danger[disabled] {
+  background-color: var(--color-disabled);
+  color: var(--text-color-disabled);
+}
+
+.secondary[disabled], .danger-secondary[disabled] {
+  border-color: var(--color-disabled);
+  color: var(--text-color-disabled);
+}
+
+.tertiary[disabled] {
+  border-color: transparent;
+  background-color: transparent;
+  color: var(--text-color-disabled);
+}

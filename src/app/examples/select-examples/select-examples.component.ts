@@ -22,10 +22,13 @@ export class SelectExamplesComponent implements OnInit {
 
   public formGroup = new FormGroup({
     selectedOption: new FormControl('sixth'),
-    selectedOptionRequired: new FormControl('', [Validators.required])
+    selectedOptionRequired: new FormControl('', [Validators.required]),
+    selectedOptionDisabled: new FormControl('')
   });
 
   constructor() { }
 
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.formGroup.get('selectedOptionDisabled')?.disable();
+  }
 }

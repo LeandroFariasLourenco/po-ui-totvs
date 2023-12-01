@@ -27,7 +27,7 @@ export class SelectComponent implements OnInit, ControlValueAccessor, AfterViewI
 
   @Input() helpText: string;
 
-  @Input() placeholder: string = 'Select an option';
+  @Input() placeholder: string;
 
   @Input() requiredText: string;
 
@@ -74,17 +74,13 @@ export class SelectComponent implements OnInit, ControlValueAccessor, AfterViewI
   }
 
   private set selectValue(value: string) {
-    if (!value) return;
     this.ngModelChange.emit(value);
     this.selectElement.nativeElement.value = value;
-    this.valueToShow = value;
   }
 
   public get selectValue() {
     return this.selectElement.nativeElement.value;
   }
-
-  public valueToShow: string
 
   public handleChange(value: string): void {
     this._onChange?.(value);
@@ -102,7 +98,7 @@ export class SelectComponent implements OnInit, ControlValueAccessor, AfterViewI
       return;
     }
 
-    if (this.requiredText && !this.valueToShow) {
+    if (this.requiredText && !this.selectValue) {
       this.error = true;
       return;
     }
