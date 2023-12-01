@@ -1,0 +1,60 @@
+<h3>Exemplo botões</h3>
+<div class="example">
+  <div class="example-block">
+    <app-button label="Primary" (onClick)="onButtonClick($event)"></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Secondary"
+      variant="secondary"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Tertiary"
+      variant="tertiary"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Danger"
+      variant="danger"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Danger secondary"
+      variant="danger-secondary"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="Disabled"
+      variant="secondary"
+      [disabled]="true"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <app-button
+      label="with icon"
+      variant="primary"
+      icon="po-icon po-icon-a11y-elderly"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+  <div class="example-block">
+    <ng-template #iconTemplate>
+      <i class="po-icon po-icon-a11y-elderly"></i>
+    </ng-template>
+    <app-button
+      variant="primary"
+      [icon]="iconTemplate"
+      (onClick)="onButtonClick($event)"
+    ></app-button>
+  </div>
+</div>

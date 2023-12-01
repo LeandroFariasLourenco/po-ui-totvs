@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
+import { PoModule } from '@po-ui/ng-components';
+import { PoTemplatesModule } from '@po-ui/ng-templates';
+
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { ExamplesModule } from './examples/examples.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([]),
+    HttpClientModule,
+    PoModule,
+    PoTemplatesModule,
+    ExamplesModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

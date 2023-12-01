@@ -1,0 +1,50 @@
+<div
+  class="select"
+  [style]="{ width: width }"
+  [ngClass]="{ error: error, disabled: disabled }"
+>
+  <div class="select-label">
+    <label [for]="ids.select" class="select-label-text"> {{ labelField }} </label>
+    <ng-container *ngIf="!!requiredText">
+      <span class="select-label-required">(obrigatório)</span>
+    </ng-container>
+  </div>
+  <div class="select-container">
+    <select
+      class="focusable"
+      [id]="ids.select"
+      [attr.required]="requiredText ? true : null"
+      [attr.disabled]="disabled ? true : null"
+      [attr.aria-label]="labelField"
+      [attr.aria-describedby]="ids.helpText + ' ' + ids.textError"
+      #select
+      (change)="handleChange($any($event.target!).value)"
+      (blur)="handleBlur()"
+    >
+      <ng-container *ngIf="placeholder && !valueToShow">
+        <option
+          hidden
+          selected
+          disabled
+        >
+          {{ placeholder }}
+        </option>
+      </ng-container>
+
+      <ng-container *ngFor="let option of options">
+        <option [value]="option.value">
+          {{ option.label }}
+        </option>
+      </ng-container>
+    </select>
+  </div>
+  <ng-container *ngIf="helpText && !error">
+    <span class="select-help-text" [id]="ids.helpText">{{ helpText }}</span>
+  </ng-container>
+  <ng-container *ngIf="error && !disabled">
+    <div class="select-error-container">
+      <i class="po-icon po-icon-warning"></i>
+      <span class="select-error-text" [id]="ids.textError">{{ textError }}</span>
+    </div>
+  </ng-container>
+</div>

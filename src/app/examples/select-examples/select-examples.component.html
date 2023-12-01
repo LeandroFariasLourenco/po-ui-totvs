@@ -1,0 +1,87 @@
+<h3>Exemplo select</h3>
+<div class="example">
+  <div class="example-block">
+    <app-select
+      labelField="Simple"
+      placeholder="Choose option"
+      helpText="Help text"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      [disabled]="true"
+      labelField="Disabled"
+      placeholder="Choose option"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      labelField="Custom size"
+      width="150px"
+      placeholder="Choose option"
+      helpText="A simple helper text to show the component adapts to the width"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      labelField="Required"
+      width="175px"
+      requiredText="obrigatório"
+      placeholder="Choose option"
+      helpText="Help text"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      labelField="Custom error message"
+      width="300px"
+      requiredText="obrigatório"
+      placeholder="Choose option"
+      textError="Another long unnecessary message to showcase the component behavior with long text, in this case, with an error"
+      helpText="Help text"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      labelField="No helper text"
+      placeholder="Choose option"
+      [options]="options"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <app-select
+      labelField="With [(ngModel)]"
+      placeholder="Choose option"
+      [(ngModel)]="selectedValue"
+      [options]="options"
+      [helpText]="selectedValue"
+    ></app-select>
+  </div>
+  <div class="example-block">
+    <form [formGroup]="formGroup">
+      <app-select
+        labelField="With formGroup"
+        placeholder="Choose option"
+        formControlName="selectedOption"
+        [options]="options"
+        [helpText]="formGroup.value.selectedOption!"
+      ></app-select>
+    </form>
+  </div>
+  <div class="example-block">
+    <form [formGroup]="formGroup">
+      <app-select
+        labelField="With formGroup validators"
+        placeholder="Choose option"
+        formControlName="selectedOptionRequired"
+        [options]="options"
+        [helpText]="formGroup.value.selectedOptionRequired!"
+      ></app-select>
+    </form>
+  </div>
+</div>

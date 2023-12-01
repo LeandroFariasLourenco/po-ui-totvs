@@ -1,0 +1,23 @@
+<button
+  [type]="type"
+  class="button focusable"
+  [ngClass]="{
+    danger: variant === 'danger',
+    primary: variant === 'primary',
+    tertiary: variant === 'tertiary',
+    secondary: variant === 'secondary',
+    large: size === 'large',
+    'danger-secondary': variant === 'danger-secondary'
+  }"
+  [attr.aria-label]="label"
+  [disabled]="disabled"
+  (click)="onClick.emit($event)"
+>
+  <ng-container *ngIf="(icon | typeof) === 'string'; else vanillaIconTemplate">
+    <i [class]="icon"></i>
+  </ng-container>
+
+  <ng-template #vanillaIconTemplate [ngTemplateOutlet]="iconTemplate"></ng-template>
+  
+  {{ label }}
+</button>

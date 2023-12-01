@@ -1,0 +1,14 @@
+.example {
+  display: flex;
+  padding: 10px;
+  border: 1px var(--color-accent);
+  border-top-style: solid;
+  border-bottom-style: solid;
+  flex-wrap: wrap;
+}
+
+.example-block:not(:last-of-type) {
+  border-right: 1px solid var(--color-accent);
+  margin-right: 10px;
+  padding-right: 10px;
+}

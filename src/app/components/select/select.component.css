@@ -1,0 +1,90 @@
+.select {
+  line-height: var(--line-height);
+}
+
+.select-label {
+  display: block;
+  padding-bottom: var(--spacing-xs);
+}
+
+.select-label-text {
+  font-weight: 500;
+  font-size: var(--font-size);
+}
+
+.select-label-required {
+  color: var(--text-color-accent);
+  padding-left: var(--spacing-xs);
+  font-size: var(--helper-text-size);
+}
+
+.select.error select {
+  border-color: var(--color-error);
+}
+
+.select:not(.error) .select-container {
+  border-color: var(--color-dark);
+  background-color: var(--color-accent);
+}
+
+.select-container select {
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px 7px;
+  border-radius: var(--border-radius);
+  color: var(--text-color-accent);
+  cursor: text;
+  background-size: 12px;
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
+  appearance: none;
+  background-image: var(--select-arrow-icon-default);
+}
+
+.select-container select[disabled] {
+  cursor: not-allowed;
+  background-color: var(--color-disabled);
+  color: var(--text-color-disabled);
+  border-color: var(--color-accent);
+  background-image: var(--select-arrow-icon-error);
+}
+
+.select.disabled .select-label-text {
+  color: var(--text-color-disabled);
+}
+
+.select.disabled .select-help-text {
+  color: var(--text-color-help-disabled);
+}
+
+.select-error-container {
+  display: flex;
+}
+
+.select-error-container i {
+  margin-right: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
+  border: 1px solid var(--color-error);
+  border-radius: 100%;
+  font-size: 14px;
+  height: 16px;
+  color: var(--color-error);
+}
+
+.select-error-text {
+  color: var(--color-error);
+  font-size: var(--helper-text-size);
+  font-family: var(--font-family);
+  padding-top: var(--spacing-xs);
+  display: block;
+}
+
+.select-help-text {
+  display: block;
+  font-family: var(--font-family);
+  font-size: var(--helper-text-size);
+  line-height: var(--line-height);
+  color: var(--text-color-help);
+  padding-top: var(--spacing-xs);
+  text-align: left;
+}

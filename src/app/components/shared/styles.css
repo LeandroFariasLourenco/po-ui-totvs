@@ -1,0 +1,6 @@
+.focusable:focus, .focusable:focus-visible {
+  outline-style: solid;
+  outline-offset: 2px;
+  outline-color: var(--outline-color-focused);
+  outline-width: var(--outline-width);
+}
